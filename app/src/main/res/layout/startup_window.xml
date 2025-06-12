@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".StartupActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingEnd="8dp">
+
+            <TextView
+                android:id="@+id/textView_title_timer_settings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/title_timer_settings"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:layout_marginBottom="16dp"/>
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switch_enable_timer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/label_enable_timer"
+                android:checked="false"
+                android:textSize="16sp"
+                android:layout_marginBottom="8dp"/>
+
+            <LinearLayout
+                android:id="@+id/layout_timer_minutes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/textView_timer_minutes_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_minutes_per_player"
+                    android:textSize="16sp"/>
+
+                <EditText
+                    android:id="@+id/editText_timer_minutes"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:inputType="number"
+                    android:text="@string/default_timer_minutes"
+                    android:maxLength="3"
+                    android:textSize="16sp"
+                    android:autofillHints="no" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView_title_win_conditions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/title_win_conditions"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:padding="2dp"/>
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switch_win_rows"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:checked="true"
+                android:text="@string/label_win_rows"
+                android:textSize="16sp" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switch_win_cols"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:text="@string/label_win_cols"
+                android:textSize="16sp"
+                android:checked="true"/>
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switch_win_diag"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:text="@string/label_win_diag"
+                android:textSize="16sp"
+                android:checked="true"/>
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switch_win_2x2"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:text="@string/label_win_2x2"
+                android:textSize="16sp"
+                android:checked="true"/>
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switch_win_3x3"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:text="@string/label_win_3x3"
+                android:textSize="16sp"
+                android:checked="true"/>
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switch_win_4x4"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:text="@string/label_win_4x4"
+                android:textSize="16sp"
+                android:checked="true"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button_start_game"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/button_start_game"
+        android:layout_marginTop="24dp"/>
+
+</LinearLayout>

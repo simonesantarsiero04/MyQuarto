@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="piece_image_margin">2dp</dimen>
+    <dimen name="piece_largo_size">75dp</dimen>
+    <dimen name="piece_board_size">75dp</dimen>
+    <dimen name="piece_stretto_size">40dp</dimen>
+
+    <dimen name="activity_horizontal_padding">8dp</dimen>
+    <dimen name="activity_vertical_padding">8dp</dimen>
+    <dimen name="center_panel_horizontal_padding">8dp</dimen>
+    <dimen name="sub_column_side_padding">4dp</dimen>
+    <dimen name="grid_layout_internal_padding">0dp</dimen>
+</resources>

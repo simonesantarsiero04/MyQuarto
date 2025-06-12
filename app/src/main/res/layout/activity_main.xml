@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:padding="8dp"
+    android:background="#DDDDDD"
+    tools:context=".MainActivity"
+    tools:ignore="HardcodedText">
+
+    <LinearLayout
+        android:id="@+id/left_panel_clocks"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.10"
+        android:orientation="vertical"
+        android:gravity="center_horizontal|center_vertical"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp">
+
+        <TextView
+            android:id="@+id/textview_player2_clock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00:00"
+            android:textSize="28sp"
+            android:fontFamily="monospace"
+            android:textColor="@android:color/black"
+            android:rotation="-90"
+            android:layout_marginBottom="10dp"/>
+
+        <Button
+            android:id="@+id/button_abort_game"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/button_abort_game_text"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="48dp"
+            android:rotation="-90"
+            android:textSize="9sp"/>
+
+        <TextView
+            android:id="@+id/textview_player1_clock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00:00"
+            android:textSize="28sp"
+            android:fontFamily="monospace"
+            android:textColor="@android:color/holo_red_dark"
+            android:rotation="-90" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/center_panel_game"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.7"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/board_sub_column"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:paddingEnd="4dp">
+
+            <GridLayout
+                android:id="@+id/gridlayout_board"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:columnCount="4"
+                android:rowCount="4"
+                android:alignmentMode="alignMargins"
+                android:background="#AAAAAA"
+                android:padding="2dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/available_pieces_sub_column"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:paddingStart="4dp">
+
+            <GridLayout
+                android:id="@+id/gridlayout_available_pieces"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:columnCount="4"
+                android:rowCount="4"
+                android:alignmentMode="alignMargins"
+                android:columnOrderPreserved="false"
+                android:rowOrderPreserved="false"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/right_panel_players_status"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.17"
+        android:orientation="vertical"
+        android:paddingStart="8dp">
+
+        <LinearLayout
+            android:id="@+id/player2_display_panel"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:rotation="180"
+            android:layout_marginBottom="4dp">
+
+            <TextView
+                android:id="@+id/textview_player2_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/status_waiting_opponent"
+                android:minLines="2"
+                android:gravity="center"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"/>
+
+            <ImageView
+                android:id="@+id/imageview_player2_piece_slot"
+                android:layout_width="@dimen/piece_largo_size"
+                android:layout_height="@dimen/piece_largo_size"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="4dp"
+                android:scaleType="fitCenter"
+                android:contentDescription="@string/label_piece_to_place"/>
+
+            <Button
+                android:id="@+id/button_player2_quarto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/button_quarto"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/player1_display_panel"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginTop="4dp">
+
+            <TextView
+                android:id="@+id/textview_player1_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/status_select_piece_for_opponent"
+                android:minLines="2"
+                android:gravity="center"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"/>
+
+            <ImageView
+                android:id="@+id/imageview_player1_piece_slot"
+                android:layout_width="@dimen/piece_largo_size"
+                android:layout_height="@dimen/piece_largo_size"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="4dp"
+                android:scaleType="fitCenter"
+                android:contentDescription="@string/label_piece_to_place"/>
+
+            <Button
+                android:id="@+id/button_player1_quarto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/button_quarto"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

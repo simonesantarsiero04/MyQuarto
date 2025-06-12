@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">My Quarto</string>
+
+    <string name="title_game_settings">Impostazioni di Gioco</string>
+    <string name="label_enable_timer">Abilita Timer</string>
+    <string name="label_minutes_per_player">Minuti per giocatore:</string>
+    <string name="title_win_conditions">Condizioni di Vittoria</string>
+    <string name="label_win_rows">Righe</string>
+    <string name="label_win_cols">Colonne</string>
+    <string name="label_win_diag">Diagonali</string>
+    <string name="label_win_2x2">Vertici Quadrati 2x2</string>
+    <string name="label_win_3x3">Vertici Quadrati 3x3</string>
+    <string name="label_win_4x4">Vertici Scacchiera</string>
+    <string name="button_start_game">Avvia Partita</string>
+    <string name="default_timer_minutes">3</string>
+    <string name="toast_invalid_time_default">Tempo non valido, usando %1$d minuti.</string>
+    <string name="title_timer_settings">Impostazioni Timer</string>
+
+    <string name="main_activity_title">Quarto!</string>
+    <string name="player_1_title">Giocatore 1</string>
+    <string name="player_2_title">Giocatore 2</string>
+    <string name="label_piece_to_place">Pezzo da Piazzare:</string>
+    <string name="button_quarto">QUARTO!</string>
+
+    <string name="status_waiting_opponent">Attendi avversario.</string>
+    <string name="status_select_piece_for_opponent">Scegli un pezzo per l\'avversario.</string>
+    <string name="status_place_your_piece">Scegli dove posizionare il pezzo.</string>
+    <string name="button_return_to_settings">Torna alle Impostazioni</string>
+    <string name="button_abort_game_text">Abortisci</string>
+
+    <string name="dialog_time_out_title">Tempo Scaduto!</string>
+    <string name="dialog_player_1_wins_timeout">Il Giocatore 1 è senza tempo! Vince il Giocatore 2!</string>
+    <string name="dialog_player_2_wins_timeout">Il Giocatore 2 è senza tempo! Vince il Giocatore 1!</string>
+    <string name="dialog_quarto_title">QUARTO!</string>
+    <string name="dialog_player_wins_message">Il Giocatore %1$d vince con %2$s su %3$s!</string>
+    <string name="dialog_no_quarto_title">Nessun Quarto</string>
+    <string name="dialog_no_quarto_message">Nessuna combinazione vincente trovata con i pezzi attuali.</string>
+    <string name="dialog_not_your_turn_quarto_message">Puoi chiamare QUARTO! solo durante il tuo turno.</string>
+    <string name="dialog_draw_message">Partita Patta!</string>
+    <string name="button_play_again">Gioca Ancora</string>
+    <string name="button_quit">Esci</string>
+    <string name="toast_select_spot_first">Devi prima piazzare il tuo pezzo!</string>
+    <string name="toast_select_piece_first">Devi prima scegliere un pezzo per avversario!</string>
+</resources>
