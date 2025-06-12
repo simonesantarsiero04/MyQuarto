@@ -140,7 +140,7 @@ public class MainActivity extends AppCompatActivity implements ChessClock.ChessC
             uiHandler.setPieceOnBoard(row, col, pieceToPlace);
             uiHandler.clearPlayerPieceSlot(currentPlayer);
 
-            // Controlla fine partita per scacchiera piena
+            // Controlla fine partita per scacchiera piena, i giocatori hanno 7 secondi per chiamare quarto! diversamente è patta
             if (isBoardFull()) {
                 Log.d("GAME_FLOW", "16° pezzo piazzato. In attesa di chiamata QUARTO!");
                 isWaitingForQuartoCallAfter16th = true;
